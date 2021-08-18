@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">FirstApp</string>
+    <string name="tv_test1">HelloWorld</string>
+    <string name="btn_string">按钮</string>
+</resources>
