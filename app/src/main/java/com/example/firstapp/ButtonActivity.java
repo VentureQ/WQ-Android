@@ -9,11 +9,17 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.example.firstapp.gridview.GridViewActivity;
+import com.example.firstapp.listview.ListViewActivity;
+
 public class ButtonActivity extends AppCompatActivity {
     private Button mBtn3;
     private Button mBtnEditText;
     private Button mBtnRadioButton;
     private Button mBtnCheckBox;
+    private Button mBtnImageView;
+    private Button mBtnListView;
+    private Button mBtnGridView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,6 +53,9 @@ public class ButtonActivity extends AppCompatActivity {
         mBtnEditText= (Button) findViewById(R.id.btn_edittext);
         mBtnRadioButton=findViewById(R.id.btn_radiobutton);
         mBtnCheckBox=findViewById(R.id.btn_checkbox);
+        mBtnImageView=findViewById(R.id.btn_imageview);
+        mBtnListView=findViewById(R.id.btn_listview);
+        mBtnGridView=findViewById(R.id.btn_gridview);
         setListeners();
     }
 
@@ -59,6 +68,9 @@ public class ButtonActivity extends AppCompatActivity {
         mBtnEditText.setOnClickListener(onclick);
         mBtnRadioButton.setOnClickListener(onclick);
         mBtnCheckBox.setOnClickListener(onclick);
+        mBtnImageView.setOnClickListener(onclick);
+        mBtnListView.setOnClickListener(onclick);
+        mBtnGridView.setOnClickListener(onclick);
     }
 
     private class Onclick implements View.OnClickListener{
@@ -79,12 +91,17 @@ public class ButtonActivity extends AppCompatActivity {
                 case R.id.btn_checkbox:
                     intent=new Intent(ButtonActivity.this,CheckBoxActivity.class);
                     break;
+                case R.id.btn_imageview:
+                    intent=new Intent(ButtonActivity.this,ImageViewActivity.class);
+                    break;
+                case R.id.btn_listview:
+                    intent=new Intent(ButtonActivity.this, ListViewActivity.class);
+                    break;
+                case R.id.btn_gridview:
+                    intent=new Intent(ButtonActivity.this, GridViewActivity.class);
+                    break;
             }
             startActivity(intent);
         }
     }
-
-
-
-
 }
